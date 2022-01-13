@@ -1,17 +1,18 @@
 const express = require('express')
 const data = require('..data/learnerData')
-const learnerRouter = express.Router()
+const learnerRoute = express.Router()
 
-learnerRouter.get('/', (req, res)=> {
+learnerRoute.get('/', (req, res)=> {
 res.status(200).json({Learners: data})
 })
 
-learnerRouter.get('/:idx', (req,res)=>{
+learnerRoute.get('/:idx', (req,res)=>{
     let idx = Number(reg.params.idx)
     if (idx >= data.length || idx < 0){
       res.status(404).json({message: "Learner Not Found!"})
+    }else{
+      res.status(200).json({Learner: data[idx]})
     }
-
 })
 
 

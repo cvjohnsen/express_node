@@ -2,7 +2,6 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const port = 6000
 const app = express ()
-
 const learnerRoute = require('./routes/learnerRoute')
 
 
